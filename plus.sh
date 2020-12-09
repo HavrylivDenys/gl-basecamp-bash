@@ -24,9 +24,9 @@ plus() #@ USAGE: plus  NUM NUM => $
       fpmul $1 1000
       a=${_FPMUL}
       if $negative ; then      
-        printf "%.1f\n" "$((-1 * ( $a + $a )))e-3"
+        printf "%.2f\n" "$((-1 * ( $a + $a )))e-3"
       else
-        printf "%.1f\n" "$(( $a + $a ))e-3"
+        printf "%.2f\n" "$(( $a + $a ))e-3"
       fi
     else
       echo $(( $1 + $1 ))
@@ -47,13 +47,13 @@ plus() #@ USAGE: plus  NUM NUM => $
       fpmul $2 1000
       b=${_FPMUL}
       if $negative && $negative2; then 
-        printf "%.1f\n" "$((-1 * ( $a + $b )))e-3"
+        printf "%.2f\n" "$((-1 * ( $a + $b )))e-3"
       elif $negative; then 
-        printf "%.1f\n" "$(( $b - $a))e-3"
+        printf "%.2f\n" "$(( $b - $a))e-3"
       elif $negative2; then
-        printf "%.1f\n" "$(( $a - $b))e-3"
+        printf "%.2f\n" "$(( $a - $b))e-3"
       else
-        printf "%.1f\n" "$(( $a + $b ))e-3"
+        printf "%.2f\n" "$(( $a + $b ))e-3"
       fi
     else
       echo $(( $1 + $2 ))

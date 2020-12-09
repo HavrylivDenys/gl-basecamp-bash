@@ -4,10 +4,11 @@ source fpmul.sh
 source error.sh
 source plus.sh
 source minus.sh
+source divide.sh
 
 Main() {
   EXP=$1
-  regexp='^([-+]?[0-9]+\.?[0-9]*)(\+|\-|\*)([-+]?[0-9]+\.?[0-9]*)$'
+  regexp='^([-+]?[0-9]+\.?[0-9]*)(\+|\-|\/|\*)([-+]?[0-9]+\.?[0-9]*)$'
 
   if [ $# -eq 0 ] || [ $# -gt 1 ]; then 
       echo "Basic calculator in bash. It supports only (+)(-)(*). You can use float numbers. Enjoy!"
@@ -35,6 +36,11 @@ Main() {
         ;;
       "-")
         result=$(minus $a $b) 
+        echo $result
+        exit 0
+        ;;
+      "/")
+        result=$(divide $a $b) 
         echo $result
         exit 0
         ;;
