@@ -1,5 +1,5 @@
 # This project is a Bash home task. GL. 
-## This basic calculator supports + - *. It suppors float/real numbers.
+## This basic calculator supports + - * /. It suppors float/real numbers.
 
 ### Examples
 
